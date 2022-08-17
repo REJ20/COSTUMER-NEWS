@@ -17,7 +17,7 @@ body{
     cursor: pointer;
     top: 15px;
     right: 30px;
-    /*display: none;*/
+    display: none;
     z-index: 2;
     font-size: 25px;
 }
@@ -69,12 +69,13 @@ hr{
     width: 100%;
     height: 550px;
     background: url('/img/showcase2.jpg') no-repeat center center/cover;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
     margin-bottom: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    padding: 0 20px 50px 20px;
 
 }
 .showcase h2, .showcase p{
@@ -213,7 +214,11 @@ hr{
 }
 
 @media (max-width: 700px){
-    .main-nav ul.menu{
+.btn-menu{
+    display: block;
+}
+
+.main-nav ul.menu{
         display: block;
         position: absolute;
         top: 0;
@@ -224,20 +229,20 @@ hr{
         padding: 30px;
         opacity: .9;
         transition: transform .754s ease-in-out;
-    }
+}
 
-    .main-nav ul.menu.show{
-        transform: translateX(-20px);
-    }
+.main-nav ul.menu.show{
+    transform: translateX(-20px);
+}
 
-    .main-nav ul.menu li{
-        padding: 18px 0;
-        border-bottom: #ccc 1px solid;
-    }
+.main-nav ul.menu li{
+    padding: 18px 0;
+    border-bottom: #ccc 1px solid;
+}
 
-    .main-nav ul.nav-menu-right{
-        margin-right: 40px;
-    }
+.main-nav ul.nav-menu-right{
+    margin-right: 40px;
+}
 
     .new-cards{
         grid-template-columns: repeat(2, 1fr);
@@ -248,9 +253,29 @@ hr{
     }
     .footer-links .footer-container{
         grid-template-columns: repeat(2, 1fr);
+        font-size: 15px;
     }
 }
 
 @media (max-width: 500px){
+    .new-cards{
+        grid-template-columns: 1fr;
+    }
 
+    .new-cards img{
+        height: 270px;
+    }
+    .cards-banner-one .content,
+    .cards-banner-two .content{
+        width: 100%;
+        padding: 60px 20px;
+    }
+    .showcase{
+        width: 100%;
+        padding: 100px 20px;
+    }
+    .footer-links .footer-container{
+        grid-template-columns: 1fr;
+        font-size: 15px;
+    }
 }
